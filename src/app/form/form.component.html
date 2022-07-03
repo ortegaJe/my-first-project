@@ -1,0 +1,18 @@
+    <form (ngSubmit)="onRegister()" #myForm="ngForm">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" name="name" id="name" [(ngModel)]="register.name" placeholder="Enter Name" required>
+    <p>Mensaje de error</p>
+    </div>
+        <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" name="email" id="email" [(ngModel)]="register.email" placeholder="Enter Email" required>
+    <p>Mensaje de error</p>
+    </div>
+        <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" name="password" id="password" [(ngModel)]="register.password" placeholder="Enter Password" required>
+    <p>Mensaje de error</p>
+    </div>
+    <button type="submit" [disabled]="myForm.invalid" class="btn btn-primary">Save</button>
+    </form>
